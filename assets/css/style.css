@@ -33,7 +33,7 @@ div, section{
 }
 
 .mask-color{
-    color: var(--mainColor);
+    color: var(--mainColor) !important;
 }
 
 h1, h2, h3, h4, h5, h6, p, a{
@@ -58,12 +58,11 @@ header, main, footer{
 
 header{
     height: 500px;
-    background-color: #223b50;
-    background-image: url(../images/slide_header.png);
+    background: url(../images/heading.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: soft-light;
+    position: relative;
 }
 
 header nav{
@@ -78,7 +77,7 @@ header nav img{
 }
 
 header .header-content{
-    width: 90%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -86,7 +85,6 @@ header .header-content{
 }
 
 header .header-content .box{
-    width: 50%;
     height: 100%;
 }
 
@@ -95,16 +93,17 @@ header .header-content .box:first-child{
     justify-content: center;
     flex-direction: column;
     color: #fafafa;
+    width: 40%;
 }
 
 header .header-content .box:first-child span{
-    font-size: 25px;
+    font-size: 30px;
     color: var(--mainColor);
     font-weight: bold;
 }
 
 header .header-content .box:first-child h4{
-    font-size: 35px;
+    font-size: 40px;
     margin: 0 0 10px 0;
 }
 
@@ -127,11 +126,12 @@ header .header-content .box:first-child a{
 header .header-content .box:last-child{
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: space-between;
+    width: 60%;
 }
 
 header .header-content .box:last-child img{
-    width: 180px;
+    width: 400px;
     height: auto;
 }
 
@@ -147,7 +147,7 @@ header .header-content .box:last-child span:first-child h6{
 
 header .header-content .box:last-child span:first-child h4{
     color: #fafafa;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 header .header-content .box:last-child span:last-child{
@@ -179,7 +179,7 @@ main .section-1{
     align-items: center;
     flex-direction: column;
     padding: 50px 0;
-    margin: 100px 0 0 0;
+    margin: 50px 0 0 0;
 }
 
 main .section-1 h4{
@@ -233,14 +233,14 @@ main .section-1 a{
 }
 
 main .section-2{
-    margin: 100px 0;
+    margin: 0 0;
     width: 100%;
-    height: 950px;
+    height: auto;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color:rgba(16, 31, 44, 0.767);
+    background-color:rgba(44, 62, 78, 0.767);
     background-image: url(../images/slide_01.jpg);
     background-blend-mode:soft-light;
     background-position: center;
@@ -250,61 +250,35 @@ main .section-2{
 }
 
 main .section-container{
-    width: 100%;
-    height: 450px;
+    padding: 70px 0;
+    width: 70%;
+    text-align: center;
+    height: auto;
     display: flex;
     justify-content: center;
+    flex-direction:column;
+    align-items:center;
 }
 
-main .section-2 .section-container .in-section-2{
-    width:45%;
-    height: 100%;
-    text-align: center;
-    padding: 100px 20px;
-    box-sizing: border-box;
-    color: #fafafa;
-    border-bottom: 1px solid #fafafa;
+main .section-container .in-section-2 h4{
+    font-size: 35px;
+    margin: 0 0 50px 0;
 }
 
-main .section-2 .section-container .in-section-2:last-child{border-left: 1px solid #fafafa;}
-
-main .section-2 .section-container .in-section-2 h4, h2{
-    margin: 0 0 20px 0;
-}
-
-main .section-2 .section-container .in-section-2 h4{
-    font-size: 20px;
-}
-
-main .section-2 .section-container .in-section-2 h2{
-    font-size: 30px;
-}
-
-main .section-2 .section-container .in-section-2 p{
-    margin: 20px 0 0 0;
-    font-size: 20px;
-}
-
-main .section-2 .section-box{
-    text-align: center;
-    width:90%;
-    height: auto;
-    padding: 30px 15px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: #f7faf9d2;
-    backdrop-filter: blur(4px);
-}
-
-main .section-2 .note{
-    margin: 30px 0;
+main .section-container .in-section-2 h6{
     color: #fafafa;
     font-size: 20px;
-    font-weight: bold;
+    margin: 0 0 30px;
+    display: block;
+}
+
+main .section-container .in-section-2 a{
+    background-color: var(--mainColor);
+    border-radius:5px;
+    color: #2e2e2e;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight:bold;
 }
 
 main .section-box a{
@@ -395,7 +369,7 @@ main .section-4{
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    margin: 100px 0 0 0 ;
+    margin: 50px 0 0 0 ;
     padding: 50px 0;
 }
 
@@ -408,7 +382,11 @@ main .section-4 form{
     width: 100%;
     padding: 80px 40px;
     box-sizing: border-box;
-    background-color: var(--mainColor);
+    background-color: #223b50;
+    background-image: url(../images/5838302.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
     border-radius:10px;
     display:flex;
     justify-content:center;
