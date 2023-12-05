@@ -122,14 +122,37 @@
                     <h4>课程报名表格</h4>
                     <span>星期四 ，晚上 8pm - 9pm</span>
 
-                    <form action="">
-                        <input type="text" placeholder="Full Name">
-                        <input type="email" placeholder="Email Address">
-                        <input type="phone" placeholder="Phone">
+                    <form id="myForm" name="data-form">
+                        <input type="text" name="fullname" placeholder="Full Name">
+                        <input type="email" name="email" placeholder="Email Address">
+                        <input type="phone" name="phone" placeholder="Phone">
                         <textarea name="comment" placeholder="Your Comment" id=""></textarea>
 
-                        <button type="submit">提交报名</button>
+                        <button id="submitButton" type="submit">提交报名</button>
+                        <!-- <input type="button" value="Submit" onclick="submitForm()"> -->
                     </form>
+
+                    <script>
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbzdt7iSeLVQsd0nHNRQzGRZnFeJobgj9bfX0yT1IYOupPgHUkyRZLiIUhrELUDZl1c7/exec'
+                        const form = document.forms['data-form']
+
+                        form.addEventListener('submit', e => {
+                            e.preventDefault()
+
+                            const button = document.getElementById('submitButton');
+                            button.innerText = "Loading...";
+
+                            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                                .then(response => {
+                                    document.getElementById("myForm").reset();
+                                    alert("Data sent successfully!")
+                                    button.innerText = "提交报名";
+                                }).catch(error => {
+                                    alert('Data failed to send!')
+                                    button.innerText = "提交报名"
+                                })
+                        })
+                    </script>
                 </div>
             </div>
         </main>
