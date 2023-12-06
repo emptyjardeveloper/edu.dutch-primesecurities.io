@@ -59,10 +59,11 @@ header, main, footer{
 header{
     height: 500px;
     background: url(../images/heading.png);
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
 
 header nav{
@@ -91,19 +92,21 @@ header .header-content .box{
 header .header-content .box:first-child{
     display: inherit;
     justify-content: center;
+    transform: translateX(80px);
+    text-align: left;
     flex-direction: column;
     color: #fafafa;
     width: 40%;
 }
 
 header .header-content .box:first-child span{
-    font-size: 30px;
+    font-size: 50px;
     color: var(--mainColor);
     font-weight: bold;
 }
 
 header .header-content .box:first-child h4{
-    font-size: 40px;
+    font-size: 35px;
     margin: 0 0 10px 0;
 }
 
@@ -117,7 +120,7 @@ header .header-content .box:first-child a{
     padding: 10px 20px;
     border-radius: 8px;
     background-color: var(--mainColor);
-    color: #2e2e2e;
+    color: #fafafa;
     width: fit-content;
     font-size: 15px;
     font-weight: bolder;
@@ -131,7 +134,7 @@ header .header-content .box:last-child{
 }
 
 header .header-content .box:last-child img{
-    width: 400px;
+    width: 450px;
     height: auto;
 }
 
@@ -226,7 +229,7 @@ main .section-1 a{
     padding: 10px 20px;
     border-radius: 8px;
     background-color: var(--mainColor);
-    color: #2e2e2e;
+    color: #fafafa;
     width: fit-content;
     font-size: 15px;
     font-weight: bolder;
@@ -251,7 +254,7 @@ main .section-2{
 
 main .section-container{
     padding: 70px 0;
-    width: 70%;
+    width: 85%;
     text-align: center;
     height: auto;
     display: flex;
@@ -275,9 +278,9 @@ main .section-container .in-section-2 h6{
 main .section-container .in-section-2 a{
     background-color: var(--mainColor);
     border-radius:5px;
-    color: #2e2e2e;
+    color: #fafafa;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight:bold;
 }
 
@@ -288,7 +291,7 @@ main .section-box a{
     padding: 10px 20px;
     background-color: var(--mainColor);
     border-radius: 10px;
-    color: #2e2e2e;
+    color: #fafafa;
     font-weight: bolder;
 }
 
@@ -358,12 +361,17 @@ main .section-3 .box:last-child a{
     padding: 10px 20px;
     background-color: var(--mainColor);
     border-radius: 10px;
-    color: #2e2e2e;
+    color: #fafafa;
     font-weight: bolder;
 }
 
 main .section-4{
-    width:90%;
+    /* background-color: #223b50; */
+    background-image: url(../images/footer.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    /* background-blend-mode: multiply; */
+    width:100%;
     height: auto;
     display:flex;
     justify-content:center;
@@ -375,19 +383,17 @@ main .section-4{
 
 main .section-4 h4{
     font-size: 35px;
+    color: #fafafa;
+}
+
+main .section-4 span{
+    font-size: 30px;
+    color: #fafafa;
 }
 
 main .section-4 form{
     margin: 50px 0 0 0;
     width: 100%;
-    padding: 80px 40px;
-    box-sizing: border-box;
-    background-color: #223b50;
-    background-image: url(../images/5838302.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    border-radius:10px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -417,15 +423,17 @@ main .section-4 form textarea{
 
 main .section-4 button{
     margin: 50px 0 0 0;
-    width: 300px;
-    background-color: #223b50;
+    /* width: 300px; */
+    /* height: 40px; */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: var(--mainColor);
     color: #fafafa;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 5px;
     outline: none;
     border: none;
-    height: 40px;
     cursor: pointer;
 }
 
@@ -435,6 +443,7 @@ main .section-4 button:hover{
 }
 
 footer{
+    margin: 50px 0 0 0;
     width: 100%;
     background-color: #2b3035;
     color: #fafafa;
