@@ -1,6 +1,36 @@
+@media only screen and (min-width:1300px){
+    header{
+        height: 800px;
+        background-position: 0 -280px;
+    }
+
+    header .header-content .box:last-child img{
+        width: 650px;
+        height: auto;
+    }
+
+    header .header-content .box:last-child span{
+        transform: translate(-300px,-100px);
+    }
+
+    header .header-content .box:last-child span h6{
+        color: var(--mainColor);
+        font-size: 30px;
+    }
+    
+    header .header-content .box:last-child span h4{
+        color: #fafafa;
+        font-size: 30px;
+    }
+
+    header .header-content .box:first-child{
+        transform: translateX(200px);
+    }
+}
+
 @media only screen and (max-width:600px){
     header {
-        background-position: left;
+        background-position: -180px 0;
         height:auto;
     }
 
@@ -8,6 +38,22 @@
         flex-direction:column;
         align-items:center;
         width:90%;
+    }
+
+    header .header-content .box:first-child span{
+        font-size: 50px;
+        color: var(--mainColor);
+        font-weight: bold;
+    }
+    
+    header .header-content .box:first-child h4{
+        font-size: 35px;
+        margin: 0 0 10px 0;
+    }
+    
+    header .header-content .box:first-child h6{
+        font-size: 20px;
+        font-weight: normal;
     }
 
     header .header-content .box:first-child, header .header-content .box:last-child{
@@ -22,22 +68,26 @@
     header .header-content .box:last-child{
         margin: 80px 0 0 0;
         align-items: center;
-        flex-direction: column;
+        transform: translateX(140px);
     }
 
     header .header-content .box:last-child img{
         width: 300px;
     }
 
-    header .header-content .box:last-child span:first-child {
+    header .header-content .box:last-child span{
+        transform: translate(-150px,50px);
+    }
+
+    header .header-content .box:last-child span {
         margin: 0 0 0 0;
     }
 
-    header .header-content .box:last-child span:first-child h6{
+    header .header-content .box:last-child span h6{
         font-size: 18px;
     }
     
-    header .header-content .box:last-child span:first-child h4{
+    header .header-content .box:last-child span h4{
         font-size: 18px;
     }
 

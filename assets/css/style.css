@@ -58,8 +58,10 @@ header, main, footer{
 
 header{
     height: 500px;
-    background: url(../images/heading.png);
-    background-position: top;
+    background-color:#666666;
+    background-image: url(../images/heading.jpg);
+    background-blend-mode: multiply;
+    background-position: 0 -180px;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -92,7 +94,7 @@ header .header-content .box{
 header .header-content .box:first-child{
     display: inherit;
     justify-content: center;
-    transform: translateX(80px);
+    transform: translateX(50px);
     text-align: left;
     flex-direction: column;
     color: #fafafa;
@@ -100,18 +102,18 @@ header .header-content .box:first-child{
 }
 
 header .header-content .box:first-child span{
-    font-size: 50px;
+    font-size: 60px;
     color: var(--mainColor);
     font-weight: bold;
 }
 
 header .header-content .box:first-child h4{
-    font-size: 35px;
+    font-size: 45px;
     margin: 0 0 10px 0;
 }
 
 header .header-content .box:first-child h6{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: normal;
 }
 
@@ -127,10 +129,15 @@ header .header-content .box:first-child a{
 }
 
 header .header-content .box:last-child{
+    transform: translateX(50px);
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
-    width: 60%;
+    justify-content: flex-end;
+    width: auto;
+}
+
+header .header-content .box:last-child span{
+    transform: translate(-250px,-100px);
 }
 
 header .header-content .box:last-child img{
@@ -138,40 +145,20 @@ header .header-content .box:last-child img{
     height: auto;
 }
 
-header .header-content .box:last-child span:first-child {
+header .header-content .box:last-child span {
     margin: 0 0 30px 0;
-    text-align: right;
 }
 
-header .header-content .box:last-child span:first-child h6{
+header .header-content .box:last-child span h6{
     color: var(--mainColor);
     font-size: 20px;
+    white-space: nowrap;
 }
 
-header .header-content .box:last-child span:first-child h4{
+header .header-content .box:last-child span h4{
     color: #fafafa;
     font-size: 20px;
-}
-
-header .header-content .box:last-child span:last-child{
-    color: #fafafa;
-    margin: 0 0 80px 0;
-    padding: 0 0 0 20px;
-}
-
-header .header-content .box:last-child span:last-child h6{
-    font-size: 15px;
-}
-
-header .header-content .box:last-child span:last-child h4{
-    font-size: 25px;
-    color: var(--mainColor);
-    margin: 0 0 10px 0;
-}
-
-header .header-content .box:last-child span:last-child P{
-    margin: 5px 0 0 0;
-    padding: 0 0 0 20px;
+    white-space: nowrap;
 }
 
 main .section-1{
@@ -263,6 +250,12 @@ main .section-container{
     align-items:center;
 }
 
+main .section-container .in-section-2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 main .section-container .in-section-2 h4{
     font-size: 35px;
     margin: 0 0 50px 0;
@@ -282,6 +275,9 @@ main .section-container .in-section-2 a{
     padding: 10px 20px;
     font-size: 15px;
     font-weight:bold;
+    display: block;
+    margin: 50px 0 0 0;
+    width: fit-content;
 }
 
 main .section-box a{
